@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
 
+import Sidebar from './components/Layout/Sidebar';
+import Playlist from './components/Playlist/Playlist';
+import Song from './components/Song/Song';
+import { useAppContext } from './context/Provider';
+
 function App() {
+  const { randomColor } = useAppContext()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container" style={{ backgroundColor: randomColor }}>
+      <Sidebar />
+      <Playlist />
+      <Song />
     </div>
   );
 }

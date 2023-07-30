@@ -1,0 +1,133 @@
+.playlist {
+    color:var(--title-color);
+    padding-inline: 50px;
+    background-color: transparent;
+}
+
+.playlist_header {
+    padding: 10px;
+}
+
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 32px;
+    display: none;
+}
+
+.playlist_search {
+    margin-block: 20px;
+    display: flex;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.096);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.playlist_search input {
+    flex: 1;
+    outline: 0px;
+    border: 0px;
+    background-color: transparent;
+    color:var(--subTitle-color);
+}
+
+.playlist_search button {
+    background-color: transparent;
+    border: 0px;
+    outline: 0px;
+    color: inherit;
+}
+
+.playlist_items {
+    height: 75vh;
+    overflow: auto;
+}
+
+.playlist_items::-webkit-scrollbar {
+    display: none;
+}
+
+.playlist_items ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.playlist_items ul li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.item_content {
+    display: flex;
+    align-content: center;
+    gap: 10px;
+}
+
+.item_content h4 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.item_content p {
+    margin-top: 5px;
+    font-size: var(--subTitle-font);
+    color: var(--subTitle-color);
+}
+
+
+.active {
+    background-color: rgba(255, 255, 255, 0.096);
+    border-radius: 5px;
+}
+
+.playlist_items p {
+    font-size: var(--subTitle-font);
+}
+
+@media(max-width:950px) {
+    .header_content {
+        font-size: 12px;
+    }
+
+    .logo {
+        display: block;
+    }
+}
+
+@media(max-width:550px) {
+    .playlist {
+        padding: 0px 10px 0px 10px;
+    }
+
+    .playlist_header {
+        height: 17vh;
+        z-index: 99;
+    }
+
+    .playlist_search {
+        margin-block: 8px;
+    }
+
+    .playlist_items {
+        height: 75vh;
+        overflow: auto;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .mobile_player {
+        display: block;
+    }
+}
