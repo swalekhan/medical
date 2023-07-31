@@ -4,10 +4,14 @@
 }
 
 .back_arrow {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
     margin-bottom: 20px;
     font-size: 30px;
     display: none;
 }
+
 
 .song_header h4 {
     font-size: 18px;
@@ -57,7 +61,7 @@
 @media(max-width:550px) {
     .song {
         padding: 0px;
-        position: fixed;
+        position: absolute;
         bottom: 0px;
         width: 100%;
         height: 10vh;
@@ -74,8 +78,8 @@
     }
 
     .show_content {
-        position: absolute;
-        padding: 50px 20px;
+        position: fixed;
+        padding: 60px 20px;
         width: 100vw;
         height: 100vh;
         box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.473);
