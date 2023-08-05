@@ -53,7 +53,7 @@ const Player = ({ setIsPlaying, isPlaying, rangeHandler, percent, time }) => {
             <div className={style.player_controler}>
                 <TbPlayerTrackPrevFilled onClick={backHnadler} />
                 <div onClick={playPauseHandler}>
-                    {isPlaying ? <IoMdPlay /> : <IoMdPause />}
+                    {isPlaying ? <IoMdPause /> : <IoMdPlay />}
                 </div>
                 <TbPlayerTrackNextFilled onClick={nextHandler} />
             </div>
