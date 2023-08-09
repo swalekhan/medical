@@ -17,37 +17,10 @@ body {
   color: var(--title-color);
 }
 
-.container {
-  max-width: 1550px;
-  width: 95%;
-  margin: 0px auto;
-}
-
-.App {
-  display: grid;
-  grid-template-columns: 200px 1fr 1fr;
-  padding: 20px;
-  width: 100vw;
-  height: 100vh;
-}
-
 li {
   list-style: none;
 }
 
-@media(max-width:950px) {
-  .App {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0px;
-  }
-}
-
-@media(max-width:550px) {
-  .App {
-    grid-template-columns: 1fr;
-    padding: 0px;
-  }
-}
 
 
 
@@ -61,4 +34,4 @@ a{
 
 a:focus,a:visited, a:active{
   outline: none;
-}
+} 

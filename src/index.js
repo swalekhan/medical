@@ -3,22 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import Provider from './context/Provider';
-
-const client = new ApolloClient({
-  uri: 'https://api.ss.dev/resource/api',
-  cache: new InMemoryCache(),
-});
+import store from './store';
+import { Provider } from "react-redux"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
-      <Provider>
-        <App />
-      </Provider>
-    </ApolloProvider>
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
